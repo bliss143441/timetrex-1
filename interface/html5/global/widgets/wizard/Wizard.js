@@ -243,6 +243,7 @@ Wizard = Backbone.View.extend({
 		}
 	},
 
+//Refactor for community edition
 	disableForCommunity: function( callback ){
 //		//if ( LocalCacheData.getCurrentCompany().product_edition_id < 15 ) {
 //                if ( LocalCacheData.getCurrentCompany().product_edition_id < 15 ) {
