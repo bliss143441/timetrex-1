@@ -93,14 +93,24 @@ class APIImport extends APIFactory {
 		if ( $this->getPermissionObject()->Check('pay_period_schedule', 'add') AND $this->getPermissionObject()->Check('pay_period_schedule', 'edit') ) {
 			$retarr['-1060-payperiod'] = TTi18n::getText('Pay Periods');
 		}
+                if ( $this->getPermissionObject()->Check('punch', 'add') AND ($this->getPermissionObject()->Check('punch', 'edit') OR $this->getPermissionObject()->Check('punch', 'edit_child')) ) {
+			$retarr['-1100-punch'] = TTi18n::getText('Punches');
+		}
+		if ( $this->getPermissionObject()->Check('punch', 'add') AND ($this->getPermissionObject()->Check('punch', 'edit') OR $this->getPermissionObject()->Check('punch', 'edit_child')) ) {
+			$retarr['-1110-userdatetotal'] = TTi18n::getText('Manual TimeSheet');
+		}
+		if ( $this->getPermissionObject()->Check('schedule', 'add') AND ($this->getPermissionObject()->Check('schedule', 'edit') OR $this->getPermissionObject()->Check('schedule', 'edit_child')) ) {
+			$retarr['-1150-schedule'] = TTi18n::getText('Scheduled Shifts');
+		}
 		if (  $this->getPermissionObject()->Check('pay_stub_amendment', 'add') AND $this->getPermissionObject()->Check('pay_stub_amendment', 'edit') ) {
 			$retarr['-1200-paystubamendment'] = TTi18n::getText('Pay Stub Amendments');
 		}
 		if ( $this->getPermissionObject()->Check('accrual', 'add') AND ($this->getPermissionObject()->Check('accrual', 'edit') OR $this->getPermissionObject()->Check('accrual', 'edit_child') )) {
 			$retarr['-1300-accrual'] = TTi18n::getText('Accruals');
-		}
+		}                                
+                        
 
-		//if ( $this->getCurrentCompanyObject()->getProductEdition() >= 15 ) {
+		if ( $this->getCurrentCompanyObject()->getProductEdition() >= 15 ) {
 			if ( $this->getPermissionObject()->Check('punch', 'add') AND ($this->getPermissionObject()->Check('punch', 'edit') OR $this->getPermissionObject()->Check('punch', 'edit_child')) ) {
 				$retarr['-1100-punch'] = TTi18n::getText('Punches');
 			}
@@ -110,7 +120,7 @@ class APIImport extends APIFactory {
 			if ( $this->getPermissionObject()->Check('schedule', 'add') AND ($this->getPermissionObject()->Check('schedule', 'edit') OR $this->getPermissionObject()->Check('schedule', 'edit_child')) ) {
 				$retarr['-1150-schedule'] = TTi18n::getText('Scheduled Shifts');
 			}
-		//}
+		}
 
 		if ( $this->getCurrentCompanyObject()->getProductEdition() >= 20 ) {
 			if ( $this->getPermissionObject()->Check('client', 'add') AND $this->getPermissionObject()->Check('client', 'edit') ) {
