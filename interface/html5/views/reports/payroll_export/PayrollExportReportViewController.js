@@ -732,29 +732,35 @@ PayrollExportReportViewController = ReportBaseViewController.extend( {
 			this.buildContextMenu( true );
 			this.setEditMenu();
 		} else if ( ui.index === 2 ) {
-			if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
-				this.edit_view_tab.find( '#tab_chart' ).find( '.first-column' ).css( 'display', 'block' );
-				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
-			} else {
-				this.edit_view_tab.find( '#tab_chart' ).find( '.first-column' ).css( 'display', 'none' );
-				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'block' );
-				this.edit_view.find( '.permission-message' ).html( Global.getUpgradeMessage() );
-			}
+                        this.edit_view_tab.find( '#tab_chart' ).find( '.first-column' ).css( 'display', 'block' );
+			this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
+                                
+//			if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
+//				this.edit_view_tab.find( '#tab_chart' ).find( '.first-column' ).css( 'display', 'block' );
+//				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
+//			} else {
+//				this.edit_view_tab.find( '#tab_chart' ).find( '.first-column' ).css( 'display', 'none' );
+//				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'block' );
+//				this.edit_view.find( '.permission-message' ).html( Global.getUpgradeMessage() );
+//			}
 		} else if ( ui.index === 3 ) {
 			this.setExportGridSize();
 			this.buildContextMenu( true );
 			this.setEditMenu();
 		} else if ( ui.index === 4 ) {
-			if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
-				this.edit_view_tab.find( '#tab4' ).find( '.first-column-sub-view' ).css( 'display', 'block' );
-				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
-				this.initSubCustomColumnView();
-			} else {
-				this.edit_view_tab.find( '#tab4' ).find( '.first-column-sub-view' ).css( 'display', 'none' );
-				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'block' );
-				this.edit_view.find( '.permission-message' ).html( Global.getUpgradeMessage() );
-
-			}
+                        this.edit_view_tab.find( '#tab4' ).find( '.first-column-sub-view' ).css( 'display', 'block' );
+			this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
+			this.initSubCustomColumnView();
+                                
+//			if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
+//				this.edit_view_tab.find( '#tab4' ).find( '.first-column-sub-view' ).css( 'display', 'block' );
+//				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
+//				this.initSubCustomColumnView();
+//			} else {
+//				this.edit_view_tab.find( '#tab4' ).find( '.first-column-sub-view' ).css( 'display', 'none' );
+//				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'block' );
+//				this.edit_view.find( '.permission-message' ).html( Global.getUpgradeMessage() );
+//			}
 		} else if ( ui.index === 5 ) {
 			this.initSubSavedReportView();
 		} else {
