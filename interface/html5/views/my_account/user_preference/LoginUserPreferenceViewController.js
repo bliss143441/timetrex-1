@@ -264,7 +264,7 @@ LoginUserPreferenceViewController = BaseViewController.extend( {
 		if ( !this.current_edit_record ) {
 			return;
 		}
-
+//Refactor for community edition
 		if ( this.edit_view_tab_selected_index == 1 ) {
                         this.edit_view_tab.find( '#tab_schedule_synchronization' ).find( '.first-column' ).css( 'display', 'block' );
 				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
