@@ -167,14 +167,17 @@ CompanyViewController = BaseViewController.extend( {
 			}
 
 		} else if ( this.edit_view_tab_selected_index == 1 ) {
-			if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
-				this.edit_view_tab.find( '#tab_password_policy' ).find( '.first-column' ).css( 'display', 'block' );
-				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
-			} else {
-				this.edit_view_tab.find( '#tab_password_policy' ).find( '.first-column' ).css( 'display', 'none' );
-				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'block' );
-				this.edit_view.find( '.permission-message' ).html( Global.getUpgradeMessage() );
-			}
+                        this.edit_view_tab.find( '#tab_password_policy' ).find( '.first-column' ).css( 'display', 'block' );
+			this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
+                                
+//			if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
+//				this.edit_view_tab.find( '#tab_password_policy' ).find( '.first-column' ).css( 'display', 'block' );
+//				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
+//			} else {
+//				this.edit_view_tab.find( '#tab_password_policy' ).find( '.first-column' ).css( 'display', 'none' );
+//				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'block' );
+//				this.edit_view.find( '.permission-message' ).html( Global.getUpgradeMessage() );
+//			}
 		} else {
 			this.buildContextMenu( true );
 			this.setEditMenu();
