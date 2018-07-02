@@ -235,12 +235,15 @@ DashletWizardController = BaseWizardController.extend( {
 	},
 
 	step1ComboboxChanged: function( value ) {
-		if ( LocalCacheData.getCurrentCompany().product_edition_id < 15 && ( value == 'custom_list' || value == 'custom_report' ) ) {
-			TAlertManager.showAlert( Global.getUpgradeMessage(), $.i18n._('Denied'));
-			Global.setWidgetEnabled( this.next_btn, false );
-		} else {
-			Global.setWidgetEnabled( this.next_btn, true );
-		}
+            
+                Global.setWidgetEnabled( this.next_btn, true );
+                
+//		if ( LocalCacheData.getCurrentCompany().product_edition_id < 15 && ( value == 'custom_list' || value == 'custom_report' ) ) {
+//			TAlertManager.showAlert( Global.getUpgradeMessage(), $.i18n._('Denied'));
+//			Global.setWidgetEnabled( this.next_btn, false );
+//		} else {
+//			Global.setWidgetEnabled( this.next_btn, true );
+//		}
 	},
 
 	setDefaultName: function( dashlet_type ) {
