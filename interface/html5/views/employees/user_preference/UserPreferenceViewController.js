@@ -165,16 +165,21 @@ UserPreferenceViewController = BaseViewController.extend( {
 			}
 
 		} else if ( this.edit_view_tab_selected_index == 1 ) {
-			if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
-				this.edit_view_tab.find( '#tab_schedule_sync' ).find( '.first-column' ).css( 'display', 'block' );
+                        this.edit_view_tab.find( '#tab_schedule_sync' ).find( '.first-column' ).css( 'display', 'block' );
 				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
 				this.buildContextMenu( true );
 				this.setEditMenu();
-			} else {
-				this.edit_view_tab.find( '#tab_schedule_sync' ).find( '.first-column' ).css( 'display', 'none' );
-				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'block' );
-				this.edit_view.find( '.permission-message' ).html( Global.getUpgradeMessage() );
-			}
+                                
+//			if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
+//				this.edit_view_tab.find( '#tab_schedule_sync' ).find( '.first-column' ).css( 'display', 'block' );
+//				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
+//				this.buildContextMenu( true );
+//				this.setEditMenu();
+//			} else {
+//				this.edit_view_tab.find( '#tab_schedule_sync' ).find( '.first-column' ).css( 'display', 'none' );
+//				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'block' );
+//				this.edit_view.find( '.permission-message' ).html( Global.getUpgradeMessage() );
+//			}
 		} else {
 			this.buildContextMenu( true );
 			this.setEditMenu();
