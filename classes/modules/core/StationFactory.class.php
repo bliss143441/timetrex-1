@@ -69,7 +69,7 @@ class StationFactory extends Factory {
 											10	=> TTi18n::gettext('PC'),
 									);
 
-				if ( $product_edition_id >= 15 ) {
+				//if ( $product_edition_id >= 15 ) {
 					$retval[20]	= TTi18n::gettext('PHONE');
 					$retval[25]	= TTi18n::gettext('WirelessWeb (WAP)');
 					$retval[26]	= TTi18n::gettext('Mobile Web Browser'); //Controls mobile device web browser from quick punch.
@@ -90,7 +90,7 @@ class StationFactory extends Factory {
 					$retval[100] = TTi18n::gettext('TimeClock: TT-A8');
 					$retval[150] = TTi18n::gettext('TimeClock: TT-US100');
 					//$retval[200] = TTi18n::gettext('TimeClock: ACTAtek');
-				}
+				//}
 				break;
 			case 'station_reserved_word':
 				$retval = array('any', '*');
@@ -2353,11 +2353,11 @@ class StationFactory extends Factory {
 		// ABOVE: Validation code moved from set*() functions.
 		//
 
-		if ( is_object($this->getCompanyObject() ) AND $this->getCompanyObject()->getProductEdition() == 10 AND $this->getType() > 10 ) {
-			$this->Validator->isTrue(		'type_id',
-											FALSE,
-											TTi18n::gettext('Type is not available in %1 Community Edition, please contact our sales department for more information', APPLICATION_NAME ));
-		}
+//		if ( is_object($this->getCompanyObject() ) AND $this->getCompanyObject()->getProductEdition() == 10 AND $this->getType() > 10 ) {
+//			$this->Validator->isTrue(		'type_id',
+//											FALSE,
+//											TTi18n::gettext('Type is not available in %1 Community Edition, please contact our sales department for more information', APPLICATION_NAME ));
+//		}
 		if ( $ignore_warning == FALSE ) {
 			if ( $this->getStatus() == 20 AND $this->isActiveForAnyEmployee() == FALSE ) {
 				$this->Validator->Warning( 'group', TTi18n::gettext('Employee Criteria denies access to all employees, if you save this record it will be marked as DISABLED') );
