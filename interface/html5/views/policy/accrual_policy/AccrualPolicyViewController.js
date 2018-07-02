@@ -1342,9 +1342,7 @@ AccrualPolicyViewController = BaseViewController.extend( {
 			}
 		} else if ( this.edit_view_tab_selected_index === 2 ) {
 
-			if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
-
-				if ( this.current_edit_record.id ) {
+                        if ( this.current_edit_record.id ) {
 					this.edit_view_tab.find( '#tab_employee_settings' ).find( '.first-column-sub-view' ).css( 'display', 'block' );
 					this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
 					this.initSubAccrualPolicyUserModifier();
@@ -1353,13 +1351,25 @@ AccrualPolicyViewController = BaseViewController.extend( {
 					this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
 					this.edit_view.find( '.save-and-continue-div' ).css( 'display', 'block' );
 				}
-
-			} else {
-				this.edit_view_tab.find( '#tab_employee_settings' ).find( '.first-column-sub-view' ).css( 'display', 'none' );
-				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'block' );
-				this.edit_view.find( '.permission-message' ).html( Global.getUpgradeMessage() );
-
-			}
+                                
+//			if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
+//
+//				if ( this.current_edit_record.id ) {
+//					this.edit_view_tab.find( '#tab_employee_settings' ).find( '.first-column-sub-view' ).css( 'display', 'block' );
+//					this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
+//					this.initSubAccrualPolicyUserModifier();
+//				} else {
+//					this.edit_view_tab.find( '#tab_employee_settings' ).find( '.first-column-sub-view' ).css( 'display', 'none' );
+//					this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
+//					this.edit_view.find( '.save-and-continue-div' ).css( 'display', 'block' );
+//				}
+//
+//			} else {
+//				this.edit_view_tab.find( '#tab_employee_settings' ).find( '.first-column-sub-view' ).css( 'display', 'none' );
+//				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'block' );
+//				this.edit_view.find( '.permission-message' ).html( Global.getUpgradeMessage() );
+//
+//			}
 
 		} else {
 			this.buildContextMenu( true );
@@ -1372,24 +1382,34 @@ AccrualPolicyViewController = BaseViewController.extend( {
 
 		if ( this.edit_view_tab.tabs( 'option', 'selected' ) === 2 ) {
 
-			if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
-
-				if ( this.current_edit_record.id ) {
+                        if ( this.current_edit_record.id ) {
 					this.edit_view_tab.find( '#tab_employee_settings' ).find( '.first-column-sub-view' ).css( 'display', 'block' );
 					this.initSubAccrualPolicyUserModifier();
 				} else {
 					this.edit_view_tab.find( '#tab_employee_settings' ).find( '.first-column-sub-view' ).css( 'display', 'none' );
 					this.edit_view.find( '.save-and-continue-div' ).css( 'display', 'block' );
-				}
-
-				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
-
-			} else {
-				this.edit_view_tab.find( '#tab_employee_settings' ).find( '.first-column-sub-view' ).css( 'display', 'none' );
-				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'block' );
-				this.edit_view.find( '.permission-message' ).html( Global.getUpgradeMessage() );
-
 			}
+
+			this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
+                                
+//			if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
+//
+//				if ( this.current_edit_record.id ) {
+//					this.edit_view_tab.find( '#tab_employee_settings' ).find( '.first-column-sub-view' ).css( 'display', 'block' );
+//					this.initSubAccrualPolicyUserModifier();
+//				} else {
+//					this.edit_view_tab.find( '#tab_employee_settings' ).find( '.first-column-sub-view' ).css( 'display', 'none' );
+//					this.edit_view.find( '.save-and-continue-div' ).css( 'display', 'block' );
+//				}
+//
+//				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
+//
+//			} else {
+//				this.edit_view_tab.find( '#tab_employee_settings' ).find( '.first-column-sub-view' ).css( 'display', 'none' );
+//				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'block' );
+//				this.edit_view.find( '.permission-message' ).html( Global.getUpgradeMessage() );
+//
+//			}
 
 		} else if ( this.edit_view_tab.tabs( 'option', 'selected' ) === 3 ) {
 			if ( this.current_edit_record.id ) {
