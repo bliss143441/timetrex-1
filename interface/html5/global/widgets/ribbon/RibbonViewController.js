@@ -71,6 +71,7 @@ RibbonViewController = Backbone.View.extend( {
 		});
 
 	},
+        
 
 	//FIXME: Stops punch inout from being able to exit via the menu system except on items with dropdowns
 	//Does not trigger on Report menu items with dropdowns (see the right event)
