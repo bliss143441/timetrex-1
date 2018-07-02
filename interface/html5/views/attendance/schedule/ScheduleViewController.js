@@ -1156,6 +1156,7 @@ ScheduleViewController = BaseViewController.extend( {
 		var shift_status = 10;
 		var type_id = 40;
 
+                   
 		var mon = false, tue = false, wed = false, thu = false, fri = false, sat = false, sun = false;
 
 		for ( var w in shift_array ) {
