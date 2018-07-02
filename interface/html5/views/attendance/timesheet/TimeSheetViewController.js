@@ -7345,6 +7345,7 @@ TimeSheetViewController = BaseViewController.extend( {
 		}
 	},
 
+//Refactor for community edition
 	addRequestFromTimesheetCell: function(id) {
 //		if ( LocalCacheData.getCurrentCompany().product_edition_id < 15 ) {
 //			TAlertManager.showAlert( Global.getUpgradeMessage() );
