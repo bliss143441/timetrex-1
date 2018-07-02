@@ -233,7 +233,7 @@ DashletWizardController = BaseWizardController.extend( {
 				break;
 		}
 	},
-
+//Refactor for community edition
 	step1ComboboxChanged: function( value ) {
             
                 Global.setWidgetEnabled( this.next_btn, true );
