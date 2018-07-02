@@ -7346,10 +7346,10 @@ TimeSheetViewController = BaseViewController.extend( {
 	},
 
 	addRequestFromTimesheetCell: function(id) {
-		if ( LocalCacheData.getCurrentCompany().product_edition_id < 15 ) {
-			TAlertManager.showAlert( Global.getUpgradeMessage() );
-			return false;
-		}
+//		if ( LocalCacheData.getCurrentCompany().product_edition_id < 15 ) {
+//			TAlertManager.showAlert( Global.getUpgradeMessage() );
+//			return false;
+//		}
 
 		var current_column_field = Global.strToDate( this.select_cells_Array[0].date ? this.select_cells_Array[0].date : this.start_date_picker.getValue() ).format( this.full_format );
 
