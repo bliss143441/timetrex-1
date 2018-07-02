@@ -246,6 +246,7 @@ Global.initStaticStrings = function() {
 	Global.rese_all_dashlet_confirm_message = $.i18n._( 'You are about to remove all your customized dashlets and restore them back to the defaults.<br>Are you sure you wish to continue?' );
 };
 
+//Reset comment commit
 Global.getUpgradeMessage = function() {
 	var message = $.i18n._( 'This functionality is only available in' ) +
 		' ' + LocalCacheData.getLoginData().application_name + ' ' + $.i18n._( 'Professional, Corporate, or Enterprise Editions.' ) +
