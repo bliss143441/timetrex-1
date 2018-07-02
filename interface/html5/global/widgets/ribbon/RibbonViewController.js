@@ -60,12 +60,14 @@ RibbonViewController = Backbone.View.extend( {
 
 	onReportMenuClick: function( id ) {
 		Global.closeEditViews( function( ) {
-			if ( id === 'AffordableCareReport' && !(LocalCacheData.getCurrentCompany().product_edition_id > 10) ) {
-				TAlertManager.showAlert(Global.getUpgradeMessage());
-			} else {
-				var parent_view = LocalCacheData.current_open_edit_only_controller ? LocalCacheData.current_open_edit_only_controller : LocalCacheData.current_open_primary_controller;
-				IndexViewController.openReport( parent_view, id);
-			}
+//			if ( id === 'AffordableCareReport' && !(LocalCacheData.getCurrentCompany().product_edition_id > 10) ) {
+//				TAlertManager.showAlert(Global.getUpgradeMessage());
+//			} else {
+//				var parent_view = LocalCacheData.current_open_edit_only_controller ? LocalCacheData.current_open_edit_only_controller : LocalCacheData.current_open_primary_controller;
+//				IndexViewController.openReport( parent_view, id);
+//			}
+                var parent_view = LocalCacheData.current_open_edit_only_controller ? LocalCacheData.current_open_edit_only_controller : LocalCacheData.current_open_primary_controller;
+		IndexViewController.openReport( parent_view, id);
 		});
 
 	},
