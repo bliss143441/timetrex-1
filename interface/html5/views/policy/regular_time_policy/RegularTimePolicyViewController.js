@@ -633,5 +633,5 @@ RegularTimePolicyViewController = BaseViewController.extend( {
 			}
 		}
 	}
-
+//Refactor for community edition
 } );
