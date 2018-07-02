@@ -1983,7 +1983,9 @@ EmployeeViewController = BaseViewController.extend( {
 					this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
 					this.edit_view.find( '.save-and-continue-div' ).css( 'display', 'block' );
 			}
-                                
+        
+                //Refactor for community edition
+                //
 //			if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
 //
 //				if ( this.current_edit_record.id ) {
