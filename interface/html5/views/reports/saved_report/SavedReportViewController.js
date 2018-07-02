@@ -445,7 +445,7 @@ SavedReportViewController = BaseViewController.extend( {
 //			this.edit_view.find( '.permission-message' ).html( Global.getUpgradeMessage() );
 //			this.edit_view.find( '.save-and-continue-button-div' ).css('display', 'none');
 //		}
-
+//Refactor for community edition
 		function beforeLoadView() {
 
 		}
