@@ -474,6 +474,8 @@ LogViewController = BaseViewController.extend( {
 
 	},
 
+//Refactor for community edition
+
 	initEditViewData: function() {
 		this._super( 'initEditViewData' );
                 this.edit_view_tab.find( '#tab_audit_details' ).find( '.detail-grid-row' ).css( 'display', 'block' );
