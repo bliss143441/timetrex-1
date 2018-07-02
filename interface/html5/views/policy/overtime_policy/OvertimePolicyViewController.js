@@ -688,5 +688,5 @@ OvertimePolicyViewController = BaseViewController.extend( {
 		}
 	}
 
-
+//Refactor for community edition
 } );
