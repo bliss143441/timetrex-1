@@ -3313,6 +3313,7 @@ CompanyTaxDeductionViewController = BaseViewController.extend( {
 //						$this.edit_view_ui_dic.df_100.html( Global.getUpgradeMessage() );
 //					}
 					break;
+                                        //Refactor for community edition
 				case '80': //US - Advanced EIC Formula
 				case '82':
 					$this.attachElement( 'df_14' );
