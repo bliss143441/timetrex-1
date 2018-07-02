@@ -394,9 +394,7 @@ SavedReportViewController = BaseViewController.extend( {
 
 	initSubReportScheduleView: function() {
 
-
-		if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
-		var $this = this;
+                var $this = this;
 
 			if (this.sub_report_schedule_view_controller) {
 				this.sub_report_schedule_view_controller.buildContextMenu(true);
@@ -416,13 +414,37 @@ SavedReportViewController = BaseViewController.extend( {
 				Global.trackView('Sub' + 'ReportSchedule' + 'View');
 				ReportScheduleViewController.loadSubView(firstColumn, beforeLoadView, afterLoadView);
 
-			});
-		} else {
-			this.edit_view_tab.find( '#tab_schedule' ).find( '.first-column-sub-view' ).css( 'display', 'none' );
-			this.edit_view.find( '.permission-defined-div' ).css( 'display', 'block' )
-			this.edit_view.find( '.permission-message' ).html( Global.getUpgradeMessage() );
-			this.edit_view.find( '.save-and-continue-button-div' ).css('display', 'none');
-		}
+		});
+                        
+                
+//		if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
+//		var $this = this;
+//
+//			if (this.sub_report_schedule_view_controller) {
+//				this.sub_report_schedule_view_controller.buildContextMenu(true);
+//			this.sub_report_schedule_view_controller.setDefaultMenu();
+//			$this.sub_report_schedule_view_controller.parent_value = $this.current_edit_record.id;
+//			$this.sub_report_schedule_view_controller.parent_edit_record = $this.current_edit_record;
+//			$this.sub_report_schedule_view_controller.initData(); //Init data in this parent view
+//			return;
+//		}
+//
+//			Global.loadViewSource('ReportSchedule', 'ReportScheduleViewController.js', function () {
+//
+//				var tab = $this.edit_view_tab.find('#tab_schedule');
+//
+//				var firstColumn = tab.find('.first-column-sub-view');
+//
+//				Global.trackView('Sub' + 'ReportSchedule' + 'View');
+//				ReportScheduleViewController.loadSubView(firstColumn, beforeLoadView, afterLoadView);
+//
+//			});
+//		} else {
+//			this.edit_view_tab.find( '#tab_schedule' ).find( '.first-column-sub-view' ).css( 'display', 'none' );
+//			this.edit_view.find( '.permission-defined-div' ).css( 'display', 'block' )
+//			this.edit_view.find( '.permission-message' ).html( Global.getUpgradeMessage() );
+//			this.edit_view.find( '.save-and-continue-button-div' ).css('display', 'none');
+//		}
 
 		function beforeLoadView() {
 
