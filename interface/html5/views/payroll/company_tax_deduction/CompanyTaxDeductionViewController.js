@@ -3181,75 +3181,137 @@ CompanyTaxDeductionViewController = BaseViewController.extend( {
 					$this.edit_view_ui_dic.df_2.setField( 'user_value2' );
 					$this.edit_view_ui_dic.df_2.setValue( $this.current_edit_record.user_value2 );
 					break;
-				case '69':
+				case '69': //Custom formula?
+                                        
+                                        $this.attachElement( 'df_1' );
+					$this.edit_view_form_item_dic.df_1.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Custom Variable 1' ) + ": " );
+					$this.edit_view_ui_dic.df_1.setField( 'user_value1' );
+					$this.edit_view_ui_dic.df_1.setValue( $this.current_edit_record.user_value1 );
 
-					if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
+					$this.attachElement( 'df_2' );
+					$this.edit_view_form_item_dic.df_2.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Custom Variable 2' ) + ": " );
+					$this.edit_view_ui_dic.df_2.setField( 'user_value2' );
+					$this.edit_view_ui_dic.df_2.setValue( $this.current_edit_record.user_value2 );
 
-						$this.attachElement( 'df_1' );
-						$this.edit_view_form_item_dic.df_1.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Custom Variable 1' ) + ": " );
-						$this.edit_view_ui_dic.df_1.setField( 'user_value1' );
-						$this.edit_view_ui_dic.df_1.setValue( $this.current_edit_record.user_value1 );
+					$this.attachElement( 'df_3' );
+					$this.edit_view_form_item_dic.df_3.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Custom Variable 3' ) + ": " );
+					$this.edit_view_ui_dic.df_3.setField( 'user_value3' );
+					$this.edit_view_ui_dic.df_3.setValue( $this.current_edit_record.user_value3 );
 
-						$this.attachElement( 'df_2' );
-						$this.edit_view_form_item_dic.df_2.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Custom Variable 2' ) + ": " );
-						$this.edit_view_ui_dic.df_2.setField( 'user_value2' );
-						$this.edit_view_ui_dic.df_2.setValue( $this.current_edit_record.user_value2 );
+					$this.attachElement( 'df_4' );
+					$this.edit_view_form_item_dic.df_4.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Custom Variable 4' ) + ": " );
+					$this.edit_view_ui_dic.df_4.setField( 'user_value4' );
+					$this.edit_view_ui_dic.df_4.setValue( $this.current_edit_record.user_value4 );
 
-						$this.attachElement( 'df_3' );
-						$this.edit_view_form_item_dic.df_3.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Custom Variable 3' ) + ": " );
-						$this.edit_view_ui_dic.df_3.setField( 'user_value3' );
-						$this.edit_view_ui_dic.df_3.setValue( $this.current_edit_record.user_value3 );
+					$this.attachElement( 'df_5' );
+					$this.edit_view_form_item_dic.df_5.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Custom Variable 5' ) + ": " );
+					$this.edit_view_ui_dic.df_5.setField( 'user_value5' );
+					$this.edit_view_ui_dic.df_5.setValue( $this.current_edit_record.user_value5 );
 
-						$this.attachElement( 'df_4' );
-						$this.edit_view_form_item_dic.df_4.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Custom Variable 4' ) + ": " );
-						$this.edit_view_ui_dic.df_4.setField( 'user_value4' );
-						$this.edit_view_ui_dic.df_4.setValue( $this.current_edit_record.user_value4 );
+					$this.attachElement( 'df_6' );
+					$this.edit_view_form_item_dic.df_6.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Custom Variable 6' ) + ": " );
+					$this.edit_view_ui_dic.df_6.setField( 'user_value6' );
+					$this.edit_view_ui_dic.df_6.setValue( $this.current_edit_record.user_value6 );
 
-						$this.attachElement( 'df_5' );
-						$this.edit_view_form_item_dic.df_5.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Custom Variable 5' ) + ": " );
-						$this.edit_view_ui_dic.df_5.setField( 'user_value5' );
-						$this.edit_view_ui_dic.df_5.setValue( $this.current_edit_record.user_value5 );
+					$this.attachElement( 'df_7' );
+					$this.edit_view_form_item_dic.df_7.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Custom Variable 7' ) + ": " );
+					$this.edit_view_ui_dic.df_7.setField( 'user_value7' );
+					$this.edit_view_ui_dic.df_7.setValue( $this.current_edit_record.user_value7 );
 
-						$this.attachElement( 'df_6' );
-						$this.edit_view_form_item_dic.df_6.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Custom Variable 6' ) + ": " );
-						$this.edit_view_ui_dic.df_6.setField( 'user_value6' );
-						$this.edit_view_ui_dic.df_6.setValue( $this.current_edit_record.user_value6 );
+					$this.attachElement( 'df_8' );
+					$this.edit_view_form_item_dic.df_8.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Custom Variable 8' ) + ": " );
+					$this.edit_view_ui_dic.df_8.setField( 'user_value8' );
+					$this.edit_view_ui_dic.df_8.setValue( $this.current_edit_record.user_value8 );
 
-						$this.attachElement( 'df_7' );
-						$this.edit_view_form_item_dic.df_7.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Custom Variable 7' ) + ": " );
-						$this.edit_view_ui_dic.df_7.setField( 'user_value7' );
-						$this.edit_view_ui_dic.df_7.setValue( $this.current_edit_record.user_value7 );
+					$this.attachElement( 'df_9' );
+					$this.edit_view_form_item_dic.df_9.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Custom Variable 9' ) + ": " );
+					$this.edit_view_ui_dic.df_9.setField( 'user_value9' );
+					$this.edit_view_ui_dic.df_9.setValue( $this.current_edit_record.user_value9 );
 
-						$this.attachElement( 'df_8' );
-						$this.edit_view_form_item_dic.df_8.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Custom Variable 8' ) + ": " );
-						$this.edit_view_ui_dic.df_8.setField( 'user_value8' );
-						$this.edit_view_ui_dic.df_8.setValue( $this.current_edit_record.user_value8 );
+					$this.attachElement( 'df_10' );
+					$this.edit_view_form_item_dic.df_10.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Custom Variable 10' ) + ": " );
+					$this.edit_view_ui_dic.df_10.setField( 'user_value10' );
+					$this.edit_view_ui_dic.df_10.setValue( $this.current_edit_record.user_value10 );
 
-						$this.attachElement( 'df_9' );
-						$this.edit_view_form_item_dic.df_9.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Custom Variable 9' ) + ": " );
-						$this.edit_view_ui_dic.df_9.setField( 'user_value9' );
-						$this.edit_view_ui_dic.df_9.setValue( $this.current_edit_record.user_value9 );
+					$this.attachElement( 'df_11' );
+					$this.edit_view_form_item_dic.df_11.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Formula' ) + ": " );
+					$this.edit_view_ui_dic.df_11.setField( 'company_value1' );
+					$this.edit_view_ui_dic.df_11.setValue( $this.current_edit_record.company_value1 );
 
-						$this.attachElement( 'df_10' );
-						$this.edit_view_form_item_dic.df_10.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Custom Variable 10' ) + ": " );
-						$this.edit_view_ui_dic.df_10.setField( 'user_value10' );
-						$this.edit_view_ui_dic.df_10.setValue( $this.current_edit_record.user_value10 );
-
-						$this.attachElement( 'df_11' );
-						$this.edit_view_form_item_dic.df_11.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Formula' ) + ": " );
-						$this.edit_view_ui_dic.df_11.setField( 'company_value1' );
-						$this.edit_view_ui_dic.df_11.setValue( $this.current_edit_record.company_value1 );
-
-						$this.attachElement( 'df_12' );
-						$this.edit_view_form_item_dic.df_12.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Look Back Period' ) + ": " );
-						$this.edit_view_ui_dic.df_12.setField( 'company_value2' );
-						$this.edit_view_ui_dic.df_12.setValue( $this.current_edit_record.company_value2 );
-						$this.edit_view_ui_dic.df_13.setField( 'company_value3' );
-						$this.edit_view_ui_dic.df_13.setValue( $this.current_edit_record.company_value3 );
-					} else {
-						$this.attachElement( 'df_100' );
-						$this.edit_view_ui_dic.df_100.html( Global.getUpgradeMessage() );
-					}
+					$this.attachElement( 'df_12' );
+					$this.edit_view_form_item_dic.df_12.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Look Back Period' ) + ": " );
+					$this.edit_view_ui_dic.df_12.setField( 'company_value2' );
+					$this.edit_view_ui_dic.df_12.setValue( $this.current_edit_record.company_value2 );
+					$this.edit_view_ui_dic.df_13.setField( 'company_value3' );
+					$this.edit_view_ui_dic.df_13.setValue( $this.current_edit_record.company_value3 );
+                                                
+//					if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
+//
+//						$this.attachElement( 'df_1' );
+//						$this.edit_view_form_item_dic.df_1.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Custom Variable 1' ) + ": " );
+//						$this.edit_view_ui_dic.df_1.setField( 'user_value1' );
+//						$this.edit_view_ui_dic.df_1.setValue( $this.current_edit_record.user_value1 );
+//
+//						$this.attachElement( 'df_2' );
+//						$this.edit_view_form_item_dic.df_2.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Custom Variable 2' ) + ": " );
+//						$this.edit_view_ui_dic.df_2.setField( 'user_value2' );
+//						$this.edit_view_ui_dic.df_2.setValue( $this.current_edit_record.user_value2 );
+//
+//						$this.attachElement( 'df_3' );
+//						$this.edit_view_form_item_dic.df_3.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Custom Variable 3' ) + ": " );
+//						$this.edit_view_ui_dic.df_3.setField( 'user_value3' );
+//						$this.edit_view_ui_dic.df_3.setValue( $this.current_edit_record.user_value3 );
+//
+//						$this.attachElement( 'df_4' );
+//						$this.edit_view_form_item_dic.df_4.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Custom Variable 4' ) + ": " );
+//						$this.edit_view_ui_dic.df_4.setField( 'user_value4' );
+//						$this.edit_view_ui_dic.df_4.setValue( $this.current_edit_record.user_value4 );
+//
+//						$this.attachElement( 'df_5' );
+//						$this.edit_view_form_item_dic.df_5.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Custom Variable 5' ) + ": " );
+//						$this.edit_view_ui_dic.df_5.setField( 'user_value5' );
+//						$this.edit_view_ui_dic.df_5.setValue( $this.current_edit_record.user_value5 );
+//
+//						$this.attachElement( 'df_6' );
+//						$this.edit_view_form_item_dic.df_6.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Custom Variable 6' ) + ": " );
+//						$this.edit_view_ui_dic.df_6.setField( 'user_value6' );
+//						$this.edit_view_ui_dic.df_6.setValue( $this.current_edit_record.user_value6 );
+//
+//						$this.attachElement( 'df_7' );
+//						$this.edit_view_form_item_dic.df_7.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Custom Variable 7' ) + ": " );
+//						$this.edit_view_ui_dic.df_7.setField( 'user_value7' );
+//						$this.edit_view_ui_dic.df_7.setValue( $this.current_edit_record.user_value7 );
+//
+//						$this.attachElement( 'df_8' );
+//						$this.edit_view_form_item_dic.df_8.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Custom Variable 8' ) + ": " );
+//						$this.edit_view_ui_dic.df_8.setField( 'user_value8' );
+//						$this.edit_view_ui_dic.df_8.setValue( $this.current_edit_record.user_value8 );
+//
+//						$this.attachElement( 'df_9' );
+//						$this.edit_view_form_item_dic.df_9.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Custom Variable 9' ) + ": " );
+//						$this.edit_view_ui_dic.df_9.setField( 'user_value9' );
+//						$this.edit_view_ui_dic.df_9.setValue( $this.current_edit_record.user_value9 );
+//
+//						$this.attachElement( 'df_10' );
+//						$this.edit_view_form_item_dic.df_10.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Custom Variable 10' ) + ": " );
+//						$this.edit_view_ui_dic.df_10.setField( 'user_value10' );
+//						$this.edit_view_ui_dic.df_10.setValue( $this.current_edit_record.user_value10 );
+//
+//						$this.attachElement( 'df_11' );
+//						$this.edit_view_form_item_dic.df_11.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Formula' ) + ": " );
+//						$this.edit_view_ui_dic.df_11.setField( 'company_value1' );
+//						$this.edit_view_ui_dic.df_11.setValue( $this.current_edit_record.company_value1 );
+//
+//						$this.attachElement( 'df_12' );
+//						$this.edit_view_form_item_dic.df_12.find( '.edit-view-form-item-label' ).text( $.i18n._( 'Look Back Period' ) + ": " );
+//						$this.edit_view_ui_dic.df_12.setField( 'company_value2' );
+//						$this.edit_view_ui_dic.df_12.setValue( $this.current_edit_record.company_value2 );
+//						$this.edit_view_ui_dic.df_13.setField( 'company_value3' );
+//						$this.edit_view_ui_dic.df_13.setValue( $this.current_edit_record.company_value3 );
+//					} else {
+//						$this.attachElement( 'df_100' );
+//						$this.edit_view_ui_dic.df_100.html( Global.getUpgradeMessage() );
+//					}
 					break;
 				case '80': //US - Advanced EIC Formula
 				case '82':
