@@ -1145,10 +1145,10 @@ ScheduleViewController = BaseViewController.extend( {
 	},
 
 	addRequestFromScheduledShifts: function ( id ){
-		if ( LocalCacheData.getCurrentCompany().product_edition_id < 15 ) {
-			TAlertManager.showAlert( Global.getUpgradeMessage() );
-			return false;
-		}
+//		if ( LocalCacheData.getCurrentCompany().product_edition_id < 15 ) {
+//			TAlertManager.showAlert( Global.getUpgradeMessage() );
+//			return false;
+//		}
 
 		var request = this.api.getScheduleDefaultData(this.select_cells_Array, {async: false} ).getResult();
 		var shift_array = this.select_cells_Array;
@@ -1258,10 +1258,10 @@ ScheduleViewController = BaseViewController.extend( {
 
 	addPunchesFromScheduledShifts: function ( id ) {
 
-		if ( LocalCacheData.getCurrentCompany().product_edition_id < 15 ) {
-			TAlertManager.showAlert( Global.getUpgradeMessage() );
-			return false;
-		}
+//		if ( LocalCacheData.getCurrentCompany().product_edition_id < 15 ) {
+//			TAlertManager.showAlert( Global.getUpgradeMessage() );
+//			return false;
+//		}
 		if ( this.select_cells_Array == undefined || this.select_cells_Array.length < 1 ) {
 			TAlertManager.showAlert("No schedules selected. You can't autopunch no schedules.");
 			return false;
@@ -1318,10 +1318,10 @@ ScheduleViewController = BaseViewController.extend( {
 	},
 
 	onFindAvailableClick: function() {
-		if ( LocalCacheData.getCurrentCompany().product_edition_id <= 10 ) {
-			TAlertManager.showAlert( Global.getUpgradeMessage() );
-			return;
-		}
+//		if ( LocalCacheData.getCurrentCompany().product_edition_id <= 10 ) {
+//			TAlertManager.showAlert( Global.getUpgradeMessage() );
+//			return;
+//		}
 
 		var $this = this;
 		var args = {};
