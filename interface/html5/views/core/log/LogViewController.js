@@ -476,14 +476,16 @@ LogViewController = BaseViewController.extend( {
 
 	initEditViewData: function() {
 		this._super( 'initEditViewData' );
-		if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
-			this.edit_view_tab.find( '#tab_audit_details' ).find( '.detail-grid-row' ).css( 'display', 'block' );
-			this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
-		} else {
-			this.edit_view_tab.find( '#tab_audit_details' ).find( '.detail-grid-row' ).css( 'display', 'none' );
-			this.edit_view.find( '.permission-defined-div' ).css( 'display', 'block' );
-			this.edit_view.find( '.permission-message' ).html( Global.getUpgradeMessage() );
-		}
+                this.edit_view_tab.find( '#tab_audit_details' ).find( '.detail-grid-row' ).css( 'display', 'block' );
+		this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
+//		if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
+//			this.edit_view_tab.find( '#tab_audit_details' ).find( '.detail-grid-row' ).css( 'display', 'block' );
+//			this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
+//		} else {
+//			this.edit_view_tab.find( '#tab_audit_details' ).find( '.detail-grid-row' ).css( 'display', 'none' );
+//			this.edit_view.find( '.permission-defined-div' ).css( 'display', 'block' );
+//			this.edit_view.find( '.permission-message' ).html( Global.getUpgradeMessage() );
+//		}
 	},
 
 	onGridDblClickRow: function() {
