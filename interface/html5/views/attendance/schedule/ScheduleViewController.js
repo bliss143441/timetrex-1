@@ -1144,6 +1144,7 @@ ScheduleViewController = BaseViewController.extend( {
 		}
 	},
 
+//Refactor for community edition
 	addRequestFromScheduledShifts: function ( id ){
 //		if ( LocalCacheData.getCurrentCompany().product_edition_id < 15 ) {
 //			TAlertManager.showAlert( Global.getUpgradeMessage() );
