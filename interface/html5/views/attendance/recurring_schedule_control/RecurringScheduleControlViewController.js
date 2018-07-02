@@ -132,7 +132,7 @@ RecurringScheduleControlViewController = BaseViewController.extend( {
 		form_item_input.TTextInput( {field: 'display_weeks', width: 20} );
 		this.addEditFieldToColumn( $.i18n._( 'Display Weeks' ), form_item_input, tab_recurring_schedule_column1, '', null );
 
-		if ( ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) ) {
+		//if ( ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) ) {
 			// Auto-Punch
 			form_item_input = Global.loadWidgetByName( FormItemType.CHECKBOX );
 			form_item_input.TCheckbox( {field: 'auto_fill'} );
@@ -141,7 +141,7 @@ RecurringScheduleControlViewController = BaseViewController.extend( {
 			widgetContainer.append( form_item_input );
 			widgetContainer.append( label );
 			this.addEditFieldToColumn( $.i18n._( 'Auto-Punch' ), form_item_input, tab_recurring_schedule_column1, '', widgetContainer );
-		}
+		//}
 
 		// Employees
 		form_item_input = Global.loadWidgetByName( FormItemType.AWESOME_BOX );
