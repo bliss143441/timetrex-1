@@ -117,7 +117,7 @@ class APIAuthentication extends APIFactory {
 				$sf->setStatus( 20 ); //Enabled
 				if ( Misc::detectMobileBrowser() == FALSE ) {
 					Debug::text('PC Station device...', __FILE__, __LINE__, __METHOD__, 10);
-					$sf->setType( 10 ); //PC
+					$sf->setType( 10 ); //PC //TODO: Determine station type, PC, Mobile PC is 10
 				} else {
 					$sf->setType( 26 ); //Mobile device web browser
 					Debug::text('Mobile Station device...', __FILE__, __LINE__, __METHOD__, 10);
