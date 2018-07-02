@@ -730,6 +730,8 @@ ContributingShiftPolicyViewController = BaseViewController.extend( {
 		}
 	},
 
+//Refactor for community edition
+
 	buildSearchFields: function() {
 
 		this._super( 'buildSearchFields' );
