@@ -693,25 +693,34 @@ EmployeeViewController = BaseViewController.extend( {
 				this.edit_view.find( '.save-and-continue-div' ).css( 'display', 'block' );
 			}
 		} else if ( this.edit_view_tab_selected_index === 8 ) {
-
-			if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
-
-				if ( this.current_edit_record.id ) {
+                        if ( this.current_edit_record.id ) {
 					this.edit_view_tab.find( '#tab_accruals' ).find( '.first-column-sub-view' ).css( 'display', 'block' );
 					this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
 					this.initSubAccrualPolicyUserModifier();
-				} else {
+                            } else {
 					this.edit_view_tab.find( '#tab_accruals' ).find( '.first-column-sub-view' ).css( 'display', 'none' );
 					this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
 					this.edit_view.find( '.save-and-continue-div' ).css( 'display', 'block' );
-				}
-
-			} else {
-				this.edit_view_tab.find( '#tab_accruals' ).find( '.first-column-sub-view' ).css( 'display', 'none' );
-				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'block' );
-				this.edit_view.find( '.permission-message' ).html( Global.getUpgradeMessage() );
-
 			}
+                                
+//			if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
+//
+//				if ( this.current_edit_record.id ) {
+//					this.edit_view_tab.find( '#tab_accruals' ).find( '.first-column-sub-view' ).css( 'display', 'block' );
+//					this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
+//					this.initSubAccrualPolicyUserModifier();
+//				} else {
+//					this.edit_view_tab.find( '#tab_accruals' ).find( '.first-column-sub-view' ).css( 'display', 'none' );
+//					this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
+//					this.edit_view.find( '.save-and-continue-div' ).css( 'display', 'block' );
+//				}
+//
+//			} else {
+//				this.edit_view_tab.find( '#tab_accruals' ).find( '.first-column-sub-view' ).css( 'display', 'none' );
+//				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'block' );
+//				this.edit_view.find( '.permission-message' ).html( Global.getUpgradeMessage() );
+//
+//			}
 
 		} else if ( this.edit_view_tab_selected_index === 9 ) {
 			if ( this.current_edit_record.id ) {
@@ -1965,9 +1974,7 @@ EmployeeViewController = BaseViewController.extend( {
 				this.edit_view.find( '.save-and-continue-div' ).css( 'display', 'block' );
 			}
 		} else if ( this.edit_view_tab.tabs( 'option', 'selected' ) === 8 ) {
-			if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
-
-				if ( this.current_edit_record.id ) {
+                        if ( this.current_edit_record.id ) {
 					this.edit_view_tab.find( '#tab_accruals' ).find( '.first-column-sub-view' ).css( 'display', 'block' );
 					this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
 					this.initSubAccrualPolicyUserModifier();
@@ -1975,14 +1982,26 @@ EmployeeViewController = BaseViewController.extend( {
 					this.edit_view_tab.find( '#tab_accruals' ).find( '.first-column-sub-view' ).css( 'display', 'none' );
 					this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
 					this.edit_view.find( '.save-and-continue-div' ).css( 'display', 'block' );
-				}
-
-			} else {
-				this.edit_view_tab.find( '#tab_accruals' ).find( '.first-column-sub-view' ).css( 'display', 'none' );
-				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'block' );
-				this.edit_view.find( '.permission-message' ).html( Global.getUpgradeMessage() );
-
 			}
+                                
+//			if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
+//
+//				if ( this.current_edit_record.id ) {
+//					this.edit_view_tab.find( '#tab_accruals' ).find( '.first-column-sub-view' ).css( 'display', 'block' );
+//					this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
+//					this.initSubAccrualPolicyUserModifier();
+//				} else {
+//					this.edit_view_tab.find( '#tab_accruals' ).find( '.first-column-sub-view' ).css( 'display', 'none' );
+//					this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
+//					this.edit_view.find( '.save-and-continue-div' ).css( 'display', 'block' );
+//				}
+//
+//			} else {
+//				this.edit_view_tab.find( '#tab_accruals' ).find( '.first-column-sub-view' ).css( 'display', 'none' );
+//				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'block' );
+//				this.edit_view.find( '.permission-message' ).html( Global.getUpgradeMessage() );
+//
+//			}
 		} else if ( this.edit_view_tab_selected_index === 9 ) {
 
 			if ( this.current_edit_record.id ) {
