@@ -169,7 +169,7 @@ UserPreferenceViewController = BaseViewController.extend( {
 				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
 				this.buildContextMenu( true );
 				this.setEditMenu();
-                                
+                          //Refactor for community edition      
 //			if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
 //				this.edit_view_tab.find( '#tab_schedule_sync' ).find( '.first-column' ).css( 'display', 'block' );
 //				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
