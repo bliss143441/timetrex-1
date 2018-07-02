@@ -244,14 +244,17 @@ Wizard = Backbone.View.extend({
 	},
 
 	disableForCommunity: function( callback ){
-		if ( LocalCacheData.getCurrentCompany().product_edition_id < 15 ) {
-			TAlertManager.showAlert(Global.getUpgradeMessage(), $.i18n._('Denied'));
-		} else {
-			if ( typeof callback == 'function' ) {
+//		//if ( LocalCacheData.getCurrentCompany().product_edition_id < 15 ) {
+//                if ( LocalCacheData.getCurrentCompany().product_edition_id < 15 ) {
+//			TAlertManager.showAlert(Global.getUpgradeMessage(), $.i18n._('Denied'));
+//		} else {
+//			if ( typeof callback == 'function' ) {
+//				callback();
+//			}
+//		}
+            if ( typeof callback == 'function' ) {
 				callback();
-			}
-		}
-
+            }
 	},
 
 });
