@@ -3407,7 +3407,7 @@ class CompanyFactory extends Factory {
 					$sf->Save();
 				}
 
-				if ( $this->getProductEdition() >= 15 ) {
+				//if ( $this->getProductEdition() >= 15 ) {
 					$sf = TTnew( 'StationFactory' );
 					$sf->setCompany( $this->getId() );
 					$sf->setStatus( 20 );
@@ -3449,7 +3449,7 @@ class CompanyFactory extends Factory {
 					if ( $sf->isValid() ) {
 						$sf->Save();
 					}
-				}
+				//}
 			}
 
 			if ( $this->getEnableAddPayStubEntryAccountPreset() == TRUE
