@@ -184,6 +184,8 @@ CompanyViewController = BaseViewController.extend( {
 		}
 	},
 
+//Refactor for community edition
+//
 //	  setEditingMenu: function() {
 //
 //		  if ( this.is_viewing ) {
