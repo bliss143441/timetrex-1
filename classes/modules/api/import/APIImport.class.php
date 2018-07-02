@@ -100,7 +100,7 @@ class APIImport extends APIFactory {
 			$retarr['-1300-accrual'] = TTi18n::getText('Accruals');
 		}
 
-		if ( $this->getCurrentCompanyObject()->getProductEdition() >= 15 ) {
+		//if ( $this->getCurrentCompanyObject()->getProductEdition() >= 15 ) {
 			if ( $this->getPermissionObject()->Check('punch', 'add') AND ($this->getPermissionObject()->Check('punch', 'edit') OR $this->getPermissionObject()->Check('punch', 'edit_child')) ) {
 				$retarr['-1100-punch'] = TTi18n::getText('Punches');
 			}
@@ -110,7 +110,7 @@ class APIImport extends APIFactory {
 			if ( $this->getPermissionObject()->Check('schedule', 'add') AND ($this->getPermissionObject()->Check('schedule', 'edit') OR $this->getPermissionObject()->Check('schedule', 'edit_child')) ) {
 				$retarr['-1150-schedule'] = TTi18n::getText('Scheduled Shifts');
 			}
-		}
+		//}
 
 		if ( $this->getCurrentCompanyObject()->getProductEdition() >= 20 ) {
 			if ( $this->getPermissionObject()->Check('client', 'add') AND $this->getPermissionObject()->Check('client', 'edit') ) {
