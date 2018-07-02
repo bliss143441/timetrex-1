@@ -86,6 +86,7 @@ PayrollRemittanceAgencyEventWizardStepPublish = WizardStep.extend({
 
 	},
 
+//Refactor for community edition
 	_onNavigationClick: function( icon ) {
 		var $this = this;
 		switch ( this.getWizardObject().selected_remittance_agency_event.type_id ) {
