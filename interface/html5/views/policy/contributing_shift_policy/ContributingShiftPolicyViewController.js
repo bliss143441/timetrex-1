@@ -646,25 +646,32 @@ ContributingShiftPolicyViewController = BaseViewController.extend( {
 
 		//Handle most cases that one tab and on audit tab
 		if ( this.edit_view_tab_selected_index == 1 ) {
-			if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
-				this.edit_view_tab.find( '#tab_date_criteria' ).find( '.first-column' ).css( 'display', 'block' );
-				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
-			} else {
-				this.edit_view_tab.find( '#tab_date_criteria' ).find( '.first-column' ).css( 'display', 'none' );
-				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'block' );
-				this.edit_view.find( '.permission-message' ).html( Global.getUpgradeMessage() );
-			}
+                        this.edit_view_tab.find( '#tab_date_criteria' ).find( '.first-column' ).css( 'display', 'block' );
+			this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
+                                
+//			if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
+//				this.edit_view_tab.find( '#tab_date_criteria' ).find( '.first-column' ).css( 'display', 'block' );
+//				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
+//			} else {
+//				this.edit_view_tab.find( '#tab_date_criteria' ).find( '.first-column' ).css( 'display', 'none' );
+//				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'block' );
+//				this.edit_view.find( '.permission-message' ).html( Global.getUpgradeMessage() );
+//			}
 			this.buildContextMenu( true );
 			this.setEditMenu();
 		} else if ( this.edit_view_tab_selected_index == 2 ) {
-			if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
-				this.edit_view_tab.find( '#tab_differential_criteria' ).find( '.first-column' ).css( 'display', 'block' );
-				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
-			} else {
-				this.edit_view_tab.find( '#tab_differential_criteria' ).find( '.first-column' ).css( 'display', 'none' );
-				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'block' );
-				this.edit_view.find( '.permission-message' ).html( Global.getUpgradeMessage() );
-			}
+                        this.edit_view_tab.find( '#tab_differential_criteria' ).find( '.first-column' ).css( 'display', 'block' );
+			this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
+                                
+//			if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
+//				this.edit_view_tab.find( '#tab_differential_criteria' ).find( '.first-column' ).css( 'display', 'block' );
+//				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
+//			} else {
+//				this.edit_view_tab.find( '#tab_differential_criteria' ).find( '.first-column' ).css( 'display', 'none' );
+//				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'block' );
+//				this.edit_view.find( '.permission-message' ).html( Global.getUpgradeMessage() );
+//			}
+                        
 			this.buildContextMenu( true );
 			this.setEditMenu();
 		} else if ( this.edit_view_tab_selected_index === 3 ) {
@@ -689,23 +696,29 @@ ContributingShiftPolicyViewController = BaseViewController.extend( {
 		//Handle most case that one tab and one audit tab
 
 		if ( this.edit_view_tab_selected_index == 1 ) {
-			if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
-				this.edit_view_tab.find( '#tab_date_criteria' ).find( '.first-column' ).css( 'display', 'block' );
-				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
-			} else {
-				this.edit_view_tab.find( '#tab_date_criteria' ).find( '.first-column' ).css( 'display', 'none' );
-				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'block' );
-				this.edit_view.find( '.permission-message' ).html( Global.getUpgradeMessage() );
-			}
+                        this.edit_view_tab.find( '#tab_date_criteria' ).find( '.first-column' ).css( 'display', 'block' );
+			this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
+                        
+//			if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
+//				this.edit_view_tab.find( '#tab_date_criteria' ).find( '.first-column' ).css( 'display', 'block' );
+//				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
+//			} else {
+//				this.edit_view_tab.find( '#tab_date_criteria' ).find( '.first-column' ).css( 'display', 'none' );
+//				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'block' );
+//				this.edit_view.find( '.permission-message' ).html( Global.getUpgradeMessage() );
+//			}
 		} else if ( this.edit_view_tab_selected_index == 2 ) {
-			if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
-				this.edit_view_tab.find( '#tab_differential_criteria' ).find( '.first-column' ).css( 'display', 'block' );
-				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
-			} else {
-				this.edit_view_tab.find( '#tab_differential_criteria' ).find( '.first-column' ).css( 'display', 'none' );
-				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'block' );
-				this.edit_view.find( '.permission-message' ).html( Global.getUpgradeMessage() );
-			}
+                        this.edit_view_tab.find( '#tab_differential_criteria' ).find( '.first-column' ).css( 'display', 'block' );
+			this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
+                        
+//			if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
+//				this.edit_view_tab.find( '#tab_differential_criteria' ).find( '.first-column' ).css( 'display', 'block' );
+//				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'none' );
+//			} else {
+//				this.edit_view_tab.find( '#tab_differential_criteria' ).find( '.first-column' ).css( 'display', 'none' );
+//				this.edit_view.find( '.permission-defined-div' ).css( 'display', 'block' );
+//				this.edit_view.find( '.permission-message' ).html( Global.getUpgradeMessage() );
+//			}
 		} else if ( this.edit_view_tab.tabs( 'option', 'selected' ) === 3 ) {
 			if ( this.current_edit_record.id ) {
 				this.edit_view_tab.find( '#tab_audit' ).find( '.first-column-sub-view' ).css( 'display', 'block' );
