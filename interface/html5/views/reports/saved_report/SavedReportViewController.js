@@ -59,17 +59,25 @@ SavedReportViewController = BaseViewController.extend( {
 		switch ( id ) {
 			case ContextMenuIconName.share_report:
 
-				if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
-					var default_data = [];
-					if ( this.edit_view && this.current_edit_record.id ) {
+                                var default_data = [];
+                                    if ( this.edit_view && this.current_edit_record.id ) {
 						default_data.push( this.current_edit_record.id );
-					} else if ( !this.edit_view ) {
+                                    } else if ( !this.edit_view ) {
 						default_data = this.getGridSelectIdArray()
-					}
-					IndexViewController.openWizard( 'ShareReportWizard', default_data );
-				} else {
-					TAlertManager.showAlert( Global.getUpgradeMessage() );
 				}
+				IndexViewController.openWizard( 'ShareReportWizard', default_data );
+                                        
+//				if ( LocalCacheData.getCurrentCompany().product_edition_id > 10 ) {
+//					var default_data = [];
+//					if ( this.edit_view && this.current_edit_record.id ) {
+//						default_data.push( this.current_edit_record.id );
+//					} else if ( !this.edit_view ) {
+//						default_data = this.getGridSelectIdArray()
+//					}
+//					IndexViewController.openWizard( 'ShareReportWizard', default_data );
+//				} else {
+//					TAlertManager.showAlert( Global.getUpgradeMessage() );
+//				}
 
 				break;
 		}
@@ -255,10 +263,10 @@ SavedReportViewController = BaseViewController.extend( {
 					report_name = 'JobAnalysisReport';
 					break;
 				case 'AffordableCareReport':
-					if (LocalCacheData.getCurrentCompany().product_edition_id == 10) {
-						TAlertManager.showAlert(Global.getUpgradeMessage());
-						report_name = null;
-					}
+//					if (LocalCacheData.getCurrentCompany().product_edition_id == 10) {
+//						TAlertManager.showAlert(Global.getUpgradeMessage());
+//						report_name = null;
+//					}
 					break;
 				default:
 					ProgressBar.closeOverlay();
