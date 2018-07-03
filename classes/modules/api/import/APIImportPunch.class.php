@@ -41,7 +41,7 @@
 
 
 /**
- * @package Module_Import
+ * @package API\Import
  */
 class APIImportPunch extends APIImport {
 	protected $main_class = 'ImportPunch';
