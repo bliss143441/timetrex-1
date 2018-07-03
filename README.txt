@@ -4,7 +4,7 @@ INSTALLATION INSTRUCTIONS
 
 1. Confirm that your system meets the TimeTrex minimum requirements.
 	- PHP v5.x or greater
-	- MySQL v5.0+ or PostgreSQL v8.2+ (PostgreSQL is highly recommended)
+	- MySQL v5.0+ or PostgreSQL v8.2+ (PostgreSQL is highly recommended)        
 
 2. Locate your webroot directory on your web server. This is the directory
 on your web server where publicly accessilbe files are made available by your
