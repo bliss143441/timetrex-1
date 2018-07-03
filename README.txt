@@ -1,79 +1,56 @@
-TimeTrex can be easily installed on both Windows and Linux based operating systems:
+TimeTrex Payroll and Time Management
 
-Windows
-(or newer)	Linux
-(or newer)
-Windows 7	Ubuntu 14.04 / Debian 8
-Windows Server 2008	CentOS 7 / RHEL 6 / Fedora 24
+INSTALLATION INSTRUCTIONS
 
-System Requirements
-Minimum	Recommended
-2.0GHZ or faster dual-core CPU.
-2GB or more of memory.
-1GB or more of disk space.
-2.0GHZ or faster quad-core CPU.
-4GB or more of memory.
-10GB or more of disk space.
+1. Confirm that your system meets the TimeTrex minimum requirements.
+	- PHP v5.x or greater
+	- MySQL v5.0+ or PostgreSQL v8.2+ (PostgreSQL is highly recommended)
 
-Windows:
-How to Install TimeTrex on WindowsHome / Installation Help
-Installing TimeTrex on Windows or Windows Server:
-Download the TimeTrex installer to your computer.
-Run the downloaded executable file by double clicking on it.
-Follow the on screen instructions that will walk you through the installation wizard.
+2. Locate your webroot directory on your web server. This is the directory
+on your web server where publicly accessilbe files are made available by your
+web server. Common locations include:
+
+	/var/www/html/ (Linux/Apache)
+	C:\Inetpub\wwwroot\ (Windows/IIS)
+	C:\Program Files\Apache Group\Apache\htdocs\ (Windows/Apache)
+	/Library/Web server/Documents/ (MaxOS X/Apache)
+
+3. Unzip the TimeTrex zip file into your webroot. A directory is automatically
+created within webroot. Rename this directory if desired.
+
+4. Rename timetrex.ini.php-example_(linux|windows) to timetrex.ini.php
+
+5. Edit timetrex.ini.php and confirm that all paths are correct.
+	The installer will create and configure the database
+	for you, as well as modify other non-path settings for you.
+
+6. Point your web browser to:
+	http://<web server address>/<timetrex directory>/interface/install/install.php
+	ie: http://localhost/timetrex/interface/install/install.php
+
+7. Follow instructions
 
 
-Linux:
-How to Install TimeTrex on LinuxHome / Installation Help
-TimeTrex can be installed on Ubuntu / Debian Linux
-using either a .DEB or .ZIP file.
 
-Installing TimeTrex from the .DEB file:
-Download the TimeTrex .deb package to your computer.
-Move the package into the apt archives directory:
-mv <TimeTrex_Package>.deb /var/cache/apt/archives/<TimeTrex_Package>.deb
-Install the package:
-apt-get install /var/cache/apt/archives/<TimeTrex_Package>.deb
-During the installation you will be prompted to configure a database that TimeTrex will use, choose Yes.
-Point your web browser to the TimeTrex web-based installer:
-http://<web server address>/<timetrex directory>/interface/install/install.php
-ie: http://www.my-company.com/timetrex/interface/install/install.php
-Follow the on screen instructions that will walk you through the installation wizard.
+UPGRADE INSTRUCTIONS
 
-Installing TimeTrex from the .ZIP file:
-Install the prerequisite packages:
-apt-get install apache2 libapache2-mod-php php php7.0-cgi php7.0-cli php7.0-pgsql php7.0-pspell php7.0-gd php7.0-gettext php7.0-imap php7.0-intl php7.0-json php7.0-soap php7.0-zip php7.0-mcrypt php7.0-curl php7.0-ldap php7.0-xml php7.0-xsl php7.0-mbstring php7.0-bcmath php7.0-process postgresql
-Restart Apache after all packages are installed:
-service apache2 restart
-Download the TimeTrex .ZIP file to your computer.
-Unzip the TimeTrex .ZIP file to the root web directory:
-unzip <TimeTrex-installer>.zip -d /var/www/html/
-Rename the unzipped directory:
-mv /var/www/html/TimeTrex_v<version>/ /var/www/html/timetrex
-Rename the TimeTrex.ini.php file:
-mv /var/www/html/timetrex/timetrex.ini.php-example_linux /var/www/html/timetrex/timetrex.ini.php
-Edit the timetrex.ini.php and confirm all paths are correct: 
-nano /var/www/html/timetrex/timetrex.ini.php
-Note: Make sure the log directory and storage paths are created and that Apache can write to them.
+1. *IMPORTANT* Create a backup of your current installation, including your TimeTrex database.
 
-If you are using the default directories you can use these commands:
-mkdir -p /var/timetrex/storage
-mkdir /var/log/timetrex
-chgrp -R www-data /var/timetrex/
-chmod 775 -R /var/timetrex
-chgrp www-data /var/log/timetrex/
-chmod 775 /var/log/timetrex
-Give Apache access to the timetrex web directory:
-chgrp www-data -R /var/www/html/timetrex/
-Create a user and database for TimeTrex to use:
-sudo su postgres
-psql
-CREATE USER timetrex WITH CREATEDB CREATEROLE LOGIN PASSWORD 'password_here';
-CREATE DATABASE timetrex;
-\q
-Point your web browser to the TimeTrex web-based installer:
-http://<web server address>/<timetrex directory>/interface/install/install.php
-ie: http://www.my-company.com/timetrex/interface/install/install.php
-Follow the on screen instructions that will walk you through the installation wizard.
+2. *VERY IMPORTANT* No really, create a backup of all your TimeTrex data including your
+   timetrex.ini.php file, as it contains a cryptographic salt that if you lose you will
+   not be able to login to TimeTrex or access encrypted data ever again.
+   
+   **BE SURE TO BACKUP YOUR TimeTrex DATABASE AND YOUR timetrex.ini.php FILE!**
 
+3. Unzip TimeTrex zip overtop of your current installation.
+
+4. Edit timetrex.ini.php in your new TimeTrex directory and set:
+	installer_enabled = TRUE
+
+5. Point your web browser to:
+	http://<web server address>/<timetrex directory>/interface/install/install.php
+	ie: http://localhost/timetrex/interface/install/install.php
+
+6. Follow instructions, TimeTrex will automatically upgrade
+	your database tables as necessary.
 
