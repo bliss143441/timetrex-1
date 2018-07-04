@@ -85,8 +85,6 @@ buffer_output = TRUE
 enable_log = FALSE
 verbosity = 10
 
-disable_auto_upgrade = TRUE
-
 [other]
 default_interface = html5
 uuid_seed = 98bf93fc5f23
@@ -94,6 +92,7 @@ uuid_seed = 98bf93fc5f23
 force_ssl = FALSE
 installer_enabled = FALSE
 primary_company_id = 11e86d20-02be-0f40-9629-98bf93fc5f23
+disable_auto_upgrade = TRUE
 
 ;Specify the URL hostname to be used to access TimeTrex. The BASE_URL specified above will be appended on to this automatically.
 ; This should be a fully qualified domain name only, do not include http:// or any trailing directories.
