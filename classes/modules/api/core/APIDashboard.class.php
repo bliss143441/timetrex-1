@@ -119,6 +119,9 @@ class APIDashboard extends APIFactory {
 					}
 				}
 
+                                $retarr['custom_list'] = TTi18n::getText('Custom List');  //Saved Search & Layout
+				$retarr['custom_report'] = TTi18n::getText('Custom Report');  //Report, Report Template/Saved Report
+                                        
 				asort($retarr); //Put Custom List/Custom Report at the bottom always.
 				if ( $product_edition > 10 ) {
 					$retarr['custom_list'] = TTi18n::getText('Custom List');  //Saved Search & Layout
@@ -184,6 +187,9 @@ class APIDashboard extends APIFactory {
 				if ( $this->getPermissionObject()->Check('pay_stub_amendment', 'enabled') AND ($this->getPermissionObject()->Check('pay_stub_amendment', 'view_own') OR $this->getPermissionObject()->Check('pay_stub_amendment', 'view_child') OR $this->getPermissionObject()->Check('pay_stub_amendment', 'view')) ) {
 					$retarr['PayStubAmendment'] = TTi18n::getText('Pay Stub Amendments');
 				}
+                                
+                                $retarr['UserExpense'] = TTi18n::getText('Expenses');
+                                
 				if ( $product_edition >= 25 AND $this->getPermissionObject()->Check('user_expense', 'enabled') AND ($this->getPermissionObject()->Check('user_expense', 'view_own') OR $this->getPermissionObject()->Check('user_expense', 'view_child') OR $this->getPermissionObject()->Check('user_expense', 'view')) ) {
 					$retarr['UserExpense'] = TTi18n::getText('Expenses');
 				}
@@ -475,6 +481,9 @@ class APIDashboard extends APIFactory {
 					$retarr[] = '*<b>'.TTi18n::getText('Tip') .'</b>: '. TTi18n::getText('You can set the default screen that appears after login under MyAccount -> Preferences in the menu along the top of the screen.');
 				}
 
+                                if ($permission_level >= 10){
+                                    $retarr[] = '*<b>'.TTi18n::getText('Tip') .'</b>: '. TTi18n::getText('You can add your own custom reports to the dashboard by clicking the Add Dashlet icon at the top left.');
+                                }
 				if ( $product_edition > 10 AND $permission_level >= 10 AND Misc::MajorVersionCompare( APPLICATION_VERSION, '9.0.0', '=' ) AND TTDate::getBeginDayEpoch( $this->getCurrentUserObject()->getLastLoginDate() ) <= APPLICATION_VERSION_DATE ) {
 					$retarr[] = '*<b>'.TTi18n::getText('Tip') .'</b>: '. TTi18n::getText('You can add your own custom reports to the dashboard by clicking the Add Dashlet icon at the top left.');
 				}
