@@ -85,7 +85,7 @@ buffer_output = TRUE
 enable_log = FALSE
 verbosity = 10
 
-
+disable_auto_upgrade = TRUE
 
 [other]
 default_interface = html5
