@@ -11,7 +11,7 @@ This project will retain the "Power by Timetrex" logo or text and may change the
 name of the project in the future release.
 
 This project is under development. Some features may not work such as the 
-auto-punch and other features backported from previous versions.
+auto-punch and other features taken from previous versions.
 
 INSTALLATION INSTRUCTIONS
 
