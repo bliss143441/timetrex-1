@@ -96,9 +96,9 @@ class APIImport extends APIFactory {
                 if ( $this->getPermissionObject()->Check('punch', 'add') AND ($this->getPermissionObject()->Check('punch', 'edit') OR $this->getPermissionObject()->Check('punch', 'edit_child')) ) {
 			$retarr['-1100-punch'] = TTi18n::getText('Punches');
 		}
-		if ( $this->getPermissionObject()->Check('punch', 'add') AND ($this->getPermissionObject()->Check('punch', 'edit') OR $this->getPermissionObject()->Check('punch', 'edit_child')) ) {
-			$retarr['-1110-userdatetotal'] = TTi18n::getText('Manual TimeSheet');
-		}
+//		if ( $this->getPermissionObject()->Check('punch', 'add') AND ($this->getPermissionObject()->Check('punch', 'edit') OR $this->getPermissionObject()->Check('punch', 'edit_child')) ) {
+//			$retarr['-1110-userdatetotal'] = TTi18n::getText('Manual TimeSheet');
+//		}
 		if ( $this->getPermissionObject()->Check('schedule', 'add') AND ($this->getPermissionObject()->Check('schedule', 'edit') OR $this->getPermissionObject()->Check('schedule', 'edit_child')) ) {
 			$retarr['-1150-schedule'] = TTi18n::getText('Scheduled Shifts');
 		}
