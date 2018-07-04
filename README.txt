@@ -3,9 +3,9 @@ TimeTrex Payroll and Time Management
 Timetrex CE 11.2.4 forked. 
 Purpose is to make this version as transparent as possible, no bothering users 
 for paid upgrades or fear of features removed. 
-The project's aim is not to replicate features found on paid versions.  
-Features included are HR functions, Payroll and Scheduling only.  
-If you need invoicing, job, other advance features, go to www.timetrex.com.   
+Please note that we are not going to replicate features found on paid versions.  
+If you need invoicing, job, other advance features, please go to www.timetrex.com.  
+Features included are HRM functions, Payroll and Timesheet/Scheduling only.  
 Code modified in accordance to the open source license(AGPL-3.0). 
 This project will retain the "Power by Timetrex" logo or text and may change the
 name of the project in the future release.
