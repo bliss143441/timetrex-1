@@ -149,7 +149,7 @@ class PermissionFactory extends Factory {
 				if ( $product_edition == TT_PRODUCT_CORPORATE ) { //Corporate
 					unset( $retval['recruitment'] );
 				} elseif ( $product_edition == TT_PRODUCT_COMMUNITY OR $product_edition == TT_PRODUCT_PROFESSIONAL ) { //Community or Professional
-					unset( $retval['job'], $retval['invoice'], $retval['recruitment'] );
+					//unset( $retval['job'], $retval['invoice'], $retval['recruitment'] );
 				}
 
 				if ( defined('TIMETREX_API') == TRUE AND TIMETREX_API == TRUE ) {
@@ -281,8 +281,8 @@ class PermissionFactory extends Factory {
 					unset( $retval['recruitment'] );
 					unset( $retval['payroll'][array_search( 'user_expense', $retval['payroll'])], $retval['policy'][array_search( 'expense_policy', $retval['policy'])] );
 				} elseif ( $product_edition == TT_PRODUCT_COMMUNITY OR $product_edition == TT_PRODUCT_PROFESSIONAL ) { //Community or Professional
-					unset( $retval['recruitment'], $retval['invoice'], $retval['job'], $retval['geo_fence'], $retval['government_document'] );
-					unset( $retval['payroll'][array_search( 'user_expense', $retval['payroll'])], $retval['policy'][array_search( 'expense_policy', $retval['policy'])] );
+					//unset( $retval['recruitment'], $retval['invoice'], $retval['job'], $retval['geo_fence'], $retval['government_document'] );
+					//unset( $retval['payroll'][array_search( 'user_expense', $retval['payroll'])], $retval['policy'][array_search( 'expense_policy', $retval['policy'])] );
 				}
 
 				break;

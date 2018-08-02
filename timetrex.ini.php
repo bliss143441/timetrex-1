@@ -50,7 +50,7 @@ password = 3137Y6St
 ;Least setup, deliver email through TimeTrex's email relay via SOAP (HTTP port 80/443)
 
 ;Deliver email through remote SMTP server with the following settings.
-delivery_method = soap, smtp
+delivery_method = smtp
 smtp_host = smpc.steniel.com.ph
 smtp_port = 25
 ;smtp_username=timetrex@gmail.com
@@ -58,11 +58,11 @@ smtp_port = 25
 
 ;The domain that emails will be sent from, do not include the "@" or anything before it.
 ; *ONLY* specify this if "delivery_method" above is "smtp"
-;email_domain = smpc.steniel.com.ph
+email_domain = smpc.steniel.com.ph
 
 ;The local part of the email address that emails will be sent from, do not include the "@" or anything after it.
 ; *ONLY* specify this if "delivery_method" above is "smtp"
-;email_local_part = DoNotReply
+email_local_part = DoNotReply
 
 
 ;
